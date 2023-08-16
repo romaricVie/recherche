@@ -1,19 +1,16 @@
 @extends('template/master')
 @section('content')
 
-<main>
+<main class="container">
     <div class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
 
     <div class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
       <div class="container">
           <div class="row justify-content-center">
             <div class="">
-             <nav> 
-                <a href="{{route('presence.index')}}" class="btn btn-danger mb-3">Retour</a> 
-           </nav>
-
               <div class="card mb-3">
                 <div class="card-body">
+                   <a href="{{route('presence.index')}}" class="btn btn-danger m-3">Retour</a> 
               @if($electeurs->count()>0)
 
                  <table class="table table-hover ">
