@@ -66,8 +66,8 @@ class ElecteurController extends Controller
                             "tetepont" => $validated["tetepont"],
                             "bureauvote" => $validated["bureauvote"],
                             "code" => $validated["code"],
-
-
+                            "etat" => "non_paye",
+                            "statut" => "absent",
                      ]);
 
                   }
@@ -130,7 +130,8 @@ class ElecteurController extends Controller
         //ur = Electeur::where('code',$request->code)->get();
         $electeurs = Electeur::where('nom','like','%'.$request->nom.'%')
                               ->where('prenoms','like','%'.$request->prenoms.'%')
-                              ->where('date','like','%'.$request->date.'%')   
+                              ->where('date','like','%'.$request->date.'%')
+                              ->where('statut','absent')
                               ->get();
 
              return view('show',[

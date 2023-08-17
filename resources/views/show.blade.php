@@ -16,22 +16,24 @@
                  <table class="table table-hover ">
                   <thead>
                     <tr>
-                      <th scope="col">#id</th>
+                      
                       <th scope="col">Nom</th>
                       <th scope="col">Prenoms</th>
                       <th scope="col">Date</th>
-                      <th scope="col">Lieu Vote</th>
+                      <th scope="col">Num electeur</th>
+                      <th scope="col">Lieu vote</th>
                       <th scope="col">BV</th>
-                      <th scope="col">Tete de pont</th>
+                      <th scope="col">Tete pont</th>
                     </tr>
                   </thead>
                   <tbody>
                     @foreach($electeurs as $electeur)
                       <tr>
-                        <th scope="row"><span class="">{{$electeur->id}}</span></th>
+                        
                          <td>{{$electeur->nom ?? 'Non defini'}}</td>
                          <td>{{$electeur->prenoms ?? 'Non defini'}}</td>
                          <td>{{$electeur->date ?? 'Non defini'}}</td>
+                         <td>{{$electeur->numelecteur ?? 'Non defini'}}</td>
                          <td>{{$electeur->lieuvote ?? 'Non defini'}}</td>
                          <td>{{$electeur->bureauvote ?? 'Non defini'}}</td>
                          <td>{{$electeur->tetepont ?? 'Non defini'}}</td>

@@ -22,10 +22,12 @@ return new class extends Migration
             $table->string('numelecteur')->nullable();
             $table->string('tetepont')->nullable();
             $table->string('tetepontdeclaree')->nullable();
-            $table->enum('etat', ['paye', 'non_paye'])->default('non_paye');
-            $table->enum('statut', ['present', 'absent'])->default('absent');
+            $table->string('etat')->nullable();
+             $table->string('statut')->nullable();                           
             $table->string('admin_code')->nullable();// admin // admin_code
             $table->timestamps();
+                    //  $table->enum('etat', ['paye', 'non_paye'])->default('non_paye');
+                   //    $table->enum('statut', ['present', 'absent'])->default('absent');
         });
     }
 
